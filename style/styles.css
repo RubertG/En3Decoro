@@ -23,7 +23,7 @@ html {
 /* navbar */
 .navbar {
     background-color: var(--primary);
-    font-size: 1rem;
+    font-size: 1.2rem;
     height: 2.17em;
     overflow: hidden;
     transition: all .5s;
@@ -40,16 +40,15 @@ html {
 /* navbar-brand */
 .navbar-brand {
     position: absolute;
-    right: 0;
+    left: 0;
     display: inline-flex;
     align-items: center;
-    margin-right: .7em;
+    margin-left: .7em;
     z-index: 1;
 }
 
 .navbar-brand svg {
     color: var(--text-white);
-    order: 1;
 }
 
 .navbar-brand p {
@@ -64,9 +63,9 @@ html {
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 0;
-    margin-top: .3em;
-    margin-left: .7em;
+    right: 0;
+    margin-top: .5em;
+    margin-right: .7em;
     cursor: pointer;
     z-index: 1;
 }
