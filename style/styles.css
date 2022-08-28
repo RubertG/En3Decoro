@@ -254,3 +254,95 @@ header::after {
     font-weight: 300;
     font-size: .75em;
 }
+
+/* main section 1 */
+section {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.section-title-left {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-align: center;
+    padding-left: 20%;
+    align-self: flex-start;
+}
+
+.section-title-right {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding-right: 20%;
+    align-self: flex-end;
+}
+
+.bg-left {
+    background-color: var(--secondary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    border-bottom-right-radius: 35px;
+}
+
+.bg-right {
+    background-color: var(--secondary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-bottom-left-radius: 35px;
+}
+
+.container-img {
+    width: 70%;
+    height: 240px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-desc {
+    width: 290px;
+    margin: auto;
+    text-align: justify;
+    font-size: .9em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-desc p {
+    margin: 10px;
+}
+
+.container-desc button {
+    width: 25%;
+    align-self: center;
+}
+
+.btn-vermas {
+    background-color: var(--secondary);
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.btn-vermas a {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+
+/* animaciones */
+
+
+/* mediaquerys */
