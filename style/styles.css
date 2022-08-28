@@ -25,8 +25,11 @@ html {
     background-color: var(--primary);
     font-size: 1.2rem;
     height: 2.17em;
+    width: 100%;
     overflow: hidden;
     transition: all .5s;
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar-show {
@@ -166,3 +169,88 @@ html {
     padding-bottom: 10px;
 }
 
+/* header */
+header {
+    background-color: var(--primary);
+    color: var(--text-white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    background-color: var(--secondary);
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(15deg) translateX(-20%) translateY(95%);
+    left: 0;
+    bottom: 0;
+    -webkit-box-shadow: -6px -6px 20px -10px var(--secondary);
+    -moz-box-shadow: -6px -6px 20px -10px var(--secondary);
+    box-shadow: -6px -6px 20px -10px var(--secondary);
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.header-title-sub {
+    display: flex;
+    font-weight: 300;
+    gap: .3em;
+    margin-top: 0;
+    font-size: .75rem;
+}
+
+.header-title-sub p {
+    margin: 0;
+}
+
+.header-title-sub-list {
+    width: auto;
+    text-align: center;
+    height: 1em;
+    overflow: hidden;
+}
+
+.header-title-sub-list ul {
+    list-style: none;
+    color: var(--secondary);
+    height: 100%;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+/* header logo */
+.header-body {
+    margin-top: .8em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.header-body .logo svg {
+    width: 76px;
+    height: 76px;
+}
+
+.header-body p {
+    margin: 0;
+    font-weight: 300;
+    font-size: .75em;
+}

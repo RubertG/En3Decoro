@@ -1,5 +1,5 @@
 // variables
-
+const lista = document.querySelector('.header-title-sub-list ul')
 
 // eventos
 document.addEventListener('click', (lugar) => {
@@ -39,3 +39,31 @@ function cerrarSubmenu() {
     document.querySelector('.nav-list-productos svg').classList.remove('svg-rotar')
     document.querySelector('.navbar').classList.remove('navbar-show-submenu')
 }
+
+function frames() {
+    const animacion = lista.animate([
+        // keyFrames
+        { transform: 'TranslateY(0px)'},
+        { transform: 'TranslateY(-1.16em)'}
+    ], {
+        // options
+        easing: 'linear',
+        iterations: 1,
+        duration: 450 //milisegundos
+    })
+
+    return animacion.finished
+}
+
+function displace() {
+    frames()
+    // si la promesa termina satisfactoriamente
+        .then(() => {
+        lista.appendChild(document.querySelectorAll('.header-title-sub-list ul > li')[0])
+    })
+}
+
+// para que se repita constantemente
+setInterval(() => {
+    displace()
+}, 1700)
