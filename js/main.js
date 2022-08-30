@@ -3,16 +3,24 @@ const lista = document.querySelector('.header-title-sub-list ul')
 
 // eventos
 document.addEventListener('click', (lugar) => {
-
-    if (lugar.target.matches('.navbar-icon') || lugar.target.matches('.line1-icon') || lugar.target.matches('.line2-icon') || lugar.target.matches('.line3-icon')) {
-        animacionMenu()
-        menu()
-        cerrarSubmenu()
+    if (window.innerWidth < 767) {
+        if (lugar.target.matches('.navbar-icon') || lugar.target.matches('.line1-icon') || lugar.target.matches('.line2-icon') || lugar.target.matches('.line3-icon')) {
+            animacionMenu()
+            menu()
+            cerrarSubmenu()
+        } else if (lugar.target.matches('.nav-list-productos-title') || lugar.target.matches('.nav-list-productos-title svg')) {
+            submenu()
+        } else {
+            cerrarAnimacionMenu()
+            cerrarMenu()
+            cerrarSubmenu()
+        }
     }
+    // } else if (lugar.target.matches('.nav-list-productos-title') || lugar.target.matches('.nav-list-productos-title svg')) {
+    //     submenu()
+    // }
 
-    if (lugar.target.matches('.nav-list-productos-title') || lugar.target.matches('.nav-list-productos-title svg')) {
-        submenu()
-    }
+
 })
 
 
@@ -23,9 +31,20 @@ function animacionMenu() {
     document.querySelector('.line3-icon').classList.toggle('line3-icon-animation')
 }
 
+function cerrarAnimacionMenu() {
+    document.querySelector('.line1-icon').classList.remove('line1-icon-animation')
+    document.querySelector('.line2-icon').classList.remove('line2-icon-animation')
+    document.querySelector('.line3-icon').classList.remove('line3-icon-animation')
+}
+
 function menu() {
     document.querySelector('.navbar').classList.toggle('navbar-show')
     document.querySelector('.navbar-nav').classList.toggle('navbar-nav-show')
+}
+
+function cerrarMenu() {
+    document.querySelector('.navbar').classList.remove('navbar-show')
+    document.querySelector('.navbar-nav').classList.remove('navbar-nav-show')
 }
 
 function submenu() {
@@ -43,8 +62,8 @@ function cerrarSubmenu() {
 function frames() {
     const animacion = lista.animate([
         // keyFrames
-        { transform: 'TranslateY(0px)'},
-        { transform: 'TranslateY(-1.16em)'}
+        { transform: 'TranslateY(0px)' },
+        { transform: 'TranslateY(-1.16em)' }
     ], {
         // options
         easing: 'linear',
@@ -57,10 +76,10 @@ function frames() {
 
 function displace() {
     frames()
-    // si la promesa termina satisfactoriamente
+        // si la promesa termina satisfactoriamente
         .then(() => {
-        lista.appendChild(document.querySelectorAll('.header-title-sub-list ul > li')[0])
-    })
+            lista.appendChild(document.querySelectorAll('.header-title-sub-list ul > li')[0])
+        })
 }
 
 // para que se repita constantemente
