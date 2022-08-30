@@ -271,11 +271,11 @@ section {
 section h2 {
     font-size: 1.5rem;
     color: var(--primary);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
 }
 
 .section-title-left {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 400;
     display: inline-block;
     text-align: center;
     width: 90%;
@@ -284,8 +284,6 @@ section h2 {
 }
 
 .section-title-right {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 400;
     display: inline-block;
     width: 90%;
     align-self: flex-end;
@@ -429,9 +427,17 @@ section h2 {
         height: 30px;
     }
 
+    .nav-list-productos svg {
+        margin-top: 2px;
+    }
+
     .nav-list-productos:hover {
         height: 150px;
-    } 
+    }
+
+    .nav-list-productos:hover svg {
+        transform: rotate(-180deg);
+    }
 
     .nav-list-productos>ul {
         width: 100%;
@@ -442,7 +448,7 @@ section h2 {
         background-color: var(--primary-transparent);
     }
 
-    .nav-list-productos > ul > li > a{
+    .nav-list-productos>ul>li>a {
         color: var(--text-white);
     }
 
@@ -461,15 +467,20 @@ section h2 {
     header {
         flex-direction: row;
         justify-content: center;
-        padding: 140px 0px;
+        padding: 100px 0px;
         gap: 150px;
+    }
+
+    header::after {
+        transform: rotate(5deg) translateX(-20%) translateY(100%);
     }
 
     .header-body {
         margin: 0;
     }
 
-    header::after {
-        transform: rotate(5deg) translateX(-20%) translateY(100%);
+    .header-body .logo svg {
+        width: 100px;
+        height: 100px;
     }
 }
