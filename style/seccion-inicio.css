@@ -1,0 +1,370 @@
+/* main section 1 */
+section {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}
+
+.section-title-left {
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+    align-self: flex-start;
+    text-align: end;
+}
+
+.section-title-right {
+    display: inline-block;
+    width: 90%;
+    align-self: flex-end;
+}
+
+.bg-left {
+    background-color: var(--secondary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    border-bottom-right-radius: 35px;
+}
+
+.bg-right {
+    background-color: var(--secondary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-bottom-left-radius: 35px;
+}
+
+.container-img {
+    width: 80%;
+    max-width: 400px;
+    height: 10%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container-desc {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-desc p {
+    margin-top: 15px;
+}
+
+.bg-contacto {
+    background-image: url('../assets/img/fondoContacto.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.container-contacto {
+    width: 95%;
+    max-width: 500px;
+    margin: 4rem auto;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contacto-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-contacto-img {
+    width: 1.9em;
+    max-width: 100px;
+    height: 2.5em;
+    max-height: 130px;
+    overflow: hidden;
+}
+
+.section-contacto-img img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.contacto-header h2 {
+    display: inline;
+    width: auto;
+    margin: 0;
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.contacto-body {
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contacto-body p {
+    margin: 0 0 30px 0;
+    font-size: 1em;
+}
+
+.contacto-footer {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacto-footer a {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.contacto-footer svg {
+    width: 2rem;
+    max-width: 100px;
+    height: 2rem;
+    max-height: 100px;
+    transition: all .3s;
+}
+
+.contacto-footer svg:hover {
+    transform: scale(1.15);
+    color: rgb(216, 216, 216);
+}
+
+.btn-vermas {
+    background-color: var(--secondary);
+    width: 100px;
+    height: 35px;
+    border: none;
+    display: inline-flex;
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-vermas a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: black;
+    /* font-weight: 400; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 1s;
+}
+
+.btn-vermas::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 17.5px solid var(--primary);
+    border-bottom: 17.5px solid var(--primary);
+    border-right: 10px solid transparent;
+    border-left: 100px solid var(--primary);
+    top: 0;
+    transform: translateX(-105%);
+    transition: all .7s;
+}
+
+.btn-vermas:hover::after {
+    transform: translateX(0);
+}
+
+.btn-vermas:hover a {
+    color: var(--text-white);
+}
+
+.animar-bajando {
+    animation-name: mostrarBajando;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.animar-derecha {
+    animation-name: mostrarDerecha;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.animar-Izquierda {
+    animation-name: mostrarIzquierda;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/* animaciones */
+@keyframes mostrarBajando {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes mostrarDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes mostrarIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* mediaquerys */
+@media screen and (min-width: 768px) {
+    .contacto-header h2 {
+        font-size: 2.8rem;
+    }
+
+    .section-contacto-img {
+        width: 2.8em;
+        max-width: 100px;
+        height: 4em;
+        max-height: 130px;
+        overflow: hidden;
+    }
+
+    .bg-contacto {
+        background: transparent;
+    }
+
+    .contacto-header h2 {
+        color: var(--primary);
+    }
+
+    .contacto-body {
+        color: var(--text-dark);
+    }
+
+    .contacto-footer a {
+        color: var(--text-dark);
+    }
+
+    .contacto-footer svg:hover {
+        color: var(--primary);
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    section {
+        margin: 0;
+    }
+
+    section h2 {
+        margin: 0;
+        font-size: 2.1rem;
+    }
+
+    .section-title-left,
+    .section-title-right {
+        width: 50%;
+        margin-top: 100px;
+    }
+
+    section:nth-child(1) .section-body {
+        display: grid;
+        height: 350px;
+        grid-template-columns: 48% 57%;
+        gap: 10%;
+    }
+
+    section:nth-child(2) .section-body {
+        display: grid;
+        grid-template-columns: 42% 58%;
+        gap: 10%;
+    }
+
+    .img-derecha {
+        order: 2;
+    }
+
+    section:nth-child(1) .container-desc {
+        margin: 0;
+        width: 100%;
+        align-items: end;
+        justify-self: end;
+    }
+
+    section:nth-child(2) .container-desc {
+        margin: 0;
+        width: 10%;
+        align-items: start;
+        justify-self: start;
+    }
+
+    .container-img {
+        margin: 0;
+        height: 100%;
+        transform: translateY(-35%);
+        overflow: visible;
+    }
+
+    section:nth-child(2) .container-img {
+        justify-self: end;
+    }
+
+    section:nth-child(3) {
+        margin-top: -100px;
+    }
+
+    .container-desc p {
+        width: 360px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}
