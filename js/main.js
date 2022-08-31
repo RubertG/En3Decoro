@@ -3,7 +3,7 @@ const lista = document.querySelector('.header-title-sub-list ul')
 
 // eventos
 document.addEventListener('click', (lugar) => {
-    if (window.innerWidth < 767) {
+    if (window.innerWidth < 991) {
         if (lugar.target.matches('.navbar-icon') || lugar.target.matches('.line1-icon') || lugar.target.matches('.line2-icon') || lugar.target.matches('.line3-icon')) {
             animacionMenu()
             menu()
