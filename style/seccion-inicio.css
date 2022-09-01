@@ -322,14 +322,13 @@ section h2 {
 
     .container-img {
         margin: 0;
-        height: 130%;
-        margin-top: -18%;
+        height: 140%;
+        margin-top: -15%;
         overflow: visible;
     }
 
     section:nth-child(2) .container-img {
         justify-self: end;
-        transform: scale(1.1);
     }
 
     .container-desc p {
