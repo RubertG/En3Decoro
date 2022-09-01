@@ -83,7 +83,7 @@ section h2 {
 
 .container-contacto {
     width: 95%;
-    max-width: 500px;
+    max-width: 800px;
     margin: 4rem auto;
     display: flex;
     gap: .8rem;
@@ -135,6 +135,7 @@ section h2 {
 
 .contacto-footer {
     width: 40%;
+    max-width: 200px;
     display: flex;
     justify-content: space-between;
 }
@@ -146,14 +147,12 @@ section h2 {
 
 .contacto-footer svg {
     width: 2rem;
-    max-width: 100px;
     height: 2rem;
-    max-height: 100px;
     transition: all .3s;
 }
 
 .contacto-footer svg:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
     color: rgb(216, 216, 216);
 }
 
@@ -185,11 +184,9 @@ section h2 {
 .btn-vermas::after {
     content: '';
     position: absolute;
-    width: 100%;
-    border-top: 17.5px solid var(--primary);
-    border-bottom: 17.5px solid var(--primary);
-    border-right: 10px solid transparent;
-    border-left: 100px solid var(--primary);
+    width: 130%;
+    border-bottom: 60px solid var(--primary);
+    border-right: 30px solid transparent;
     top: 0;
     transform: translateX(-105%);
     transition: all .7s;
@@ -209,17 +206,23 @@ section h2 {
     animation-timing-function: ease-in-out;
 }
 
-.animar-derecha {
-    animation-name: mostrarDerecha;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+.ocultar-derecha {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s;
 }
 
-.animar-Izquierda {
-    animation-name: mostrarIzquierda;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+.ocultar-izquierda {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s;
 }
+
+.mostrar-animacion {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /* animaciones */
 @keyframes mostrarBajando {
@@ -231,36 +234,6 @@ section h2 {
     100% {
         opacity: 1;
         transform: translateY(0px);
-    }
-}
-
-@keyframes mostrarDerecha {
-    0% {
-        opacity: 0;
-        transform: translateX(-400px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes mostrarIzquierda {
-    0% {
-        opacity: 0;
-        transform: translateX(400px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0px);
     }
 }
 
@@ -349,22 +322,43 @@ section h2 {
 
     .container-img {
         margin: 0;
-        height: 100%;
-        transform: translateY(-35%);
+        height: 130%;
+        margin-top: -18%;
         overflow: visible;
     }
 
     section:nth-child(2) .container-img {
         justify-self: end;
-    }
-
-    section:nth-child(3) {
-        margin-top: -100px;
+        transform: scale(1.1);
     }
 
     .container-desc p {
         width: 360px;
         margin-top: 40px;
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .btn-vermas {
+        width: 120px;
+        height: 50px;
+    }
+
+    .btn-vermas a {
+        font-size: 1.2rem;
+    }
+
+    .contacto-footer svg {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+
+    .contacto-body p {
+        font-size: 1.2rem;
     }
 }
