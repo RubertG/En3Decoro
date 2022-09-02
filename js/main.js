@@ -85,4 +85,4 @@ function displace() {
 // para que se repita constantemente
 setInterval(() => {
     displace()
-}, 1700)
+}, 2000)
