@@ -4,6 +4,8 @@
 
 .container-productos {
     width: 100%;
+    max-width: 1200px;
+    align-self: center;
     padding: 0px 5px;
     margin: 40px 0px;
     display: flex;
@@ -93,5 +95,11 @@
 @media screen and (min-width: 768px) {
     .card {
         width: 230px;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    .card {
+        width: 250px;
     }
 }
