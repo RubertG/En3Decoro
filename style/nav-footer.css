@@ -478,7 +478,7 @@ footer {
     }
 
     .nav-list-productos:hover {
-        height: 160px;
+        height: 150px;
     }
 
     .nav-list-productos:hover svg {
@@ -554,7 +554,7 @@ footer {
     }
 
     .nav-list-productos ul {
-        height: 120px;
+        height: 100px;
     }
 
     .nav-list-productos a {
@@ -562,7 +562,7 @@ footer {
     }
 
     .nav-list-productos:hover {
-        height: 180px;
+        height: 155px;
     }
 
     p {
